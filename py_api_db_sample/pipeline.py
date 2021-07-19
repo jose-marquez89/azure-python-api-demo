@@ -3,6 +3,8 @@ import os
 import json
 from dotenv import load_dotenv
 
+# TODO: Morph below into a reusable class or function for use within
+# the Azure function
 
 load_dotenv()
 
