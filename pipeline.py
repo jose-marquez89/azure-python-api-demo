@@ -22,7 +22,7 @@ def get_data(section='science'):
     url = base_url + url_cat
     api_key = os.environ["NYT_KEY"]
     key_param = f"?api-key={api_key}"
-    res = requests.get(base_url + key_param)
+    res = requests.get(url + key_param)
     
     try:
         res.raise_for_status()
