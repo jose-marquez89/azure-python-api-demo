@@ -19,6 +19,7 @@ load_dotenv()
 def get_data(section='science'):
     base_url = "https://api.nytimes.com/svc/topstories/v2"
     url_cat = f"/{section}.json" 
+    url = base_url + url_cat
     api_key = os.environ["NYT_KEY"]
     key_param = f"?api-key={api_key}"
     res = requests.get(base_url + key_param)
