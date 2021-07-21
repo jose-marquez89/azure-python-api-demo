@@ -62,7 +62,10 @@ def insert_story(result, session):
 
     # necessary ids
     section_id = get_object_id(result['section'], Section, session)
-    author_name = re.search(author_ptn, result['byline']).group(2) 
+    try:
+        author_name = re.search(author_ptn, result['byline']).group(2) 
+    except Exception:
+        author_name = None
     author_id = get_object_id(author_name, Author, session)
 
     # article data
