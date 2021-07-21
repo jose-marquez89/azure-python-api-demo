@@ -17,7 +17,8 @@ logging.basicConfig(level=logging.DEBUG, format=FORMAT)
 load_dotenv()
 
 def get_data(section='science'):
-    base_url = "https://api.nytimes.com/svc/topstories/v2/science.json"
+    base_url = "https://api.nytimes.com/svc/topstories/v2"
+    url_cat = f"/{section}.json" 
     api_key = os.environ["NYT_KEY"]
     key_param = f"?api-key={api_key}"
     res = requests.get(base_url + key_param)
